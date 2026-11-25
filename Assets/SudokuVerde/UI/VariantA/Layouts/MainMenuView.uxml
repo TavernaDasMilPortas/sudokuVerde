@@ -1,0 +1,23 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="main-menu-screen" class="sv-screen bg-gradient">
+        <ui:VisualElement class="menu-top-bar">
+            <ui:Button name="btn-menu-settings" class="sv-btn-icon" tooltip="Configurações">
+                <ui:VisualElement class="sv-btn-icon__glyph glyph-settings" picking-mode="Ignore" />
+            </ui:Button>
+        </ui:VisualElement>
+
+        <ui:VisualElement class="menu-illustration" picking-mode="Ignore" />
+
+        <ui:Label name="menu-title-label" text="Sudoku&#10;Verde" class="menu-title" />
+
+        <ui:Label text="SEQUENCIA DIARIA" class="menu-streak-caption" />
+        <ui:VisualElement class="menu-streak-pill">
+            <ui:Label name="menu-streak-value" text="0" class="menu-streak-value" />
+        </ui:VisualElement>
+
+        <ui:VisualElement class="menu-actions">
+            <ui:Button name="btn-play" text="JOGAR" class="sv-btn-wide" />
+            <ui:Button name="btn-daily-challenge" text="DESAFIO DIARIO" class="sv-btn-wide" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

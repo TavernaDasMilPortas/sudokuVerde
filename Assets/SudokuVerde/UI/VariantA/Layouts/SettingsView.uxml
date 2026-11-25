@@ -1,0 +1,45 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="settings-screen" class="sv-screen bg-gradient is-hidden">
+        <ui:VisualElement class="sv-header">
+            <ui:Button name="btn-settings-back" class="sv-btn-icon" tooltip="Voltar">
+                <ui:VisualElement class="sv-btn-icon__glyph glyph-back" picking-mode="Ignore" />
+            </ui:Button>
+
+            <ui:VisualElement class="sv-header__banner sv-header__banner--settings">
+                <ui:Label text="CONFIGURACOES" class="sv-header__title" />
+            </ui:VisualElement>
+
+            <ui:VisualElement class="sv-header__spacer" picking-mode="Ignore" />
+        </ui:VisualElement>
+
+        <ui:VisualElement class="settings-content">
+            <ui:VisualElement class="settings-group">
+                <ui:Label text="MUSICA" class="settings-label" />
+                <ui:Toggle name="toggle-music" class="settings-toggle">
+                    <ui:Label name="music-status-label" text="ON" class="settings-toggle__text" picking-mode="Ignore" />
+                </ui:Toggle>
+            </ui:VisualElement>
+
+            <ui:VisualElement class="settings-group">
+                <ui:Label text="VIBRA" class="settings-label" />
+                <ui:Toggle name="toggle-vibration" class="settings-toggle">
+                    <ui:Label name="vibration-status-label" text="OFF" class="settings-toggle__text" picking-mode="Ignore" />
+                </ui:Toggle>
+            </ui:VisualElement>
+
+            <ui:VisualElement class="settings-group">
+                <ui:Label text="VOZ" class="settings-label" />
+                <ui:Toggle name="toggle-voice" class="settings-toggle">
+                    <ui:Label name="voice-status-label" text="JOGAR" class="settings-toggle__text" picking-mode="Ignore" />
+                </ui:Toggle>
+            </ui:VisualElement>
+
+            <ui:VisualElement class="settings-group">
+                <ui:Label text="VERSAO DA INTERFACE" class="settings-label" />
+                <ui:Toggle name="toggle-variant" class="settings-toggle">
+                    <ui:Label name="variant-status-label" text="VERSAO A" class="settings-toggle__text" picking-mode="Ignore" />
+                </ui:Toggle>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

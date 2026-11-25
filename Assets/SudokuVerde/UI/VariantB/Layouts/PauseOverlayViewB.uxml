@@ -1,0 +1,14 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="pause-overlay" class="sv-overlay bg-overlay-dark is-hidden">
+        <ui:VisualElement class="pause-backdrop">
+            <ui:VisualElement class="pause-card">
+                <ui:Label text="JOGO PAUSADO" class="pause-title" />
+                <ui:Button name="btn-pause-resume" text="CONTINUAR" class="sv-btn-wide" />
+                <ui:Button name="btn-pause-restart" text="REINICIAR FASE" class="sv-btn-wide" />
+                <ui:Button name="btn-pause-help" text="COMO JOGAR" class="sv-btn-wide" />
+                <ui:Button name="btn-pause-settings" text="CONFIGURACOES" class="sv-btn-wide" />
+                <ui:Button name="btn-pause-menu" text="VOLTAR AO MENU" class="sv-btn-wide" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

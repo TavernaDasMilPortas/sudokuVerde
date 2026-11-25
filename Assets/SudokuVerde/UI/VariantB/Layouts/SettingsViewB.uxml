@@ -1,0 +1,45 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="settings-screen" class="sv-screen bg-gradient is-hidden">
+        <ui:VisualElement class="vb-top-bar">
+            <ui:Button name="btn-settings-back" class="vb-btn-square" tooltip="Voltar">
+                <ui:VisualElement class="vb-glyph-back" picking-mode="Ignore" />
+            </ui:Button>
+        </ui:VisualElement>
+
+        <ui:VisualElement class="vb-settings-banner">
+            <ui:Label text="CONFIGURACOES" class="vb-settings-title" />
+        </ui:VisualElement>
+
+        <ui:VisualElement class="vb-settings-list">
+            <ui:VisualElement class="vb-settings-block">
+                <ui:VisualElement class="vb-settings-header-row">
+                    <ui:VisualElement class="vb-settings-icon vb-icon-music" picking-mode="Ignore" />
+                    <ui:Label text="MUSICA" class="vb-settings-row-label" />
+                </ui:VisualElement>
+                <ui:Toggle name="toggle-music" class="vb-seg-toggle vb-seg-toggle--on">
+                    <ui:Label text="DESLIGADO" class="vb-seg-option" picking-mode="Ignore" />
+                    <ui:Label text="LIGADO" class="vb-seg-option" picking-mode="Ignore" />
+                </ui:Toggle>
+            </ui:VisualElement>
+
+            <ui:VisualElement class="vb-settings-block">
+                <ui:VisualElement class="vb-settings-header-row">
+                    <ui:VisualElement class="vb-settings-icon vb-icon-vibration" picking-mode="Ignore" />
+                    <ui:Label text="VIBRA" class="vb-settings-row-label" />
+                </ui:VisualElement>
+                <ui:Toggle name="toggle-vibration" class="vb-seg-toggle vb-seg-toggle--off">
+                    <ui:Label text="DESLIGADO" class="vb-seg-option" picking-mode="Ignore" />
+                    <ui:Label text="LIGADO" class="vb-seg-option" picking-mode="Ignore" />
+                </ui:Toggle>
+            </ui:VisualElement>
+
+            <ui:VisualElement class="vb-settings-block">
+                <ui:Label text="VERSAO DA INTERFACE" class="vb-settings-variant-caption" />
+                <ui:Toggle name="toggle-variant" class="vb-seg-toggle vb-seg-toggle--on">
+                    <ui:Label text="VERSAO A" class="vb-seg-option" picking-mode="Ignore" />
+                    <ui:Label text="VERSAO B" class="vb-seg-option" picking-mode="Ignore" />
+                </ui:Toggle>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

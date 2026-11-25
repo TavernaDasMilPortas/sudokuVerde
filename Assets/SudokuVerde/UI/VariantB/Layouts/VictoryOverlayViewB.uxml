@@ -1,0 +1,28 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="victory-overlay" class="sv-overlay bg-overlay-dark is-hidden">
+        <ui:VisualElement class="vb-top-bar">
+            <ui:Button name="btn-victory-close" class="vb-btn-square" tooltip="Voltar ao menu">
+                <ui:VisualElement class="vb-glyph-close" picking-mode="Ignore" />
+            </ui:Button>
+        </ui:VisualElement>
+
+        <ui:VisualElement class="vb-victory-content">
+            <ui:VisualElement class="vb-victory-panel">
+                <ui:Label text="CONCLUIDO!" class="vb-victory-title" />
+                <ui:VisualElement class="vb-victory-art">
+                    <ui:VisualElement name="victory-sparkles" class="victory-sparkles" picking-mode="Ignore" />
+                    <ui:VisualElement name="victory-plant" class="victory-plant" picking-mode="Ignore" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+
+            <ui:VisualElement class="vb-victory-actions">
+                <ui:Button name="btn-victory-restart" class="vb-victory-action-btn" tooltip="Reiniciar fase">
+                    <ui:VisualElement class="vb-victory-icon-restart" picking-mode="Ignore" />
+                </ui:Button>
+                <ui:Button name="btn-victory-next" class="vb-victory-action-btn" tooltip="Próxima fase">
+                    <ui:VisualElement class="vb-victory-icon-next" picking-mode="Ignore" />
+                </ui:Button>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

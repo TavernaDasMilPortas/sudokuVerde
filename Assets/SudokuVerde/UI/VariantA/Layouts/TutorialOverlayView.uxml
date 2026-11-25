@@ -1,0 +1,38 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="tutorial-overlay" class="sv-overlay bg-overlay-green is-hidden">
+        <ui:VisualElement class="sv-header">
+            <ui:Button name="btn-tutorial-back" class="sv-btn-icon" tooltip="Voltar ao jogo">
+                <ui:VisualElement class="sv-btn-icon__glyph glyph-back" picking-mode="Ignore" />
+            </ui:Button>
+
+            <ui:VisualElement class="sv-header__banner">
+                <ui:Label text="COMO JOGAR" class="sv-header__title" />
+            </ui:VisualElement>
+
+            <ui:VisualElement class="sv-header__spacer" picking-mode="Ignore" />
+        </ui:VisualElement>
+
+        <ui:VisualElement class="tutorial-content">
+            <ui:VisualElement class="tutorial-item">
+                <ui:VisualElement class="tutorial-diagram diagram-color" picking-mode="Ignore" />
+                <ui:VisualElement class="tutorial-panel-short">
+                    <ui:Label text="1 planta por cor" class="tutorial-text" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+
+            <ui:VisualElement class="tutorial-item">
+                <ui:VisualElement class="tutorial-diagram diagram-row-col" picking-mode="Ignore" />
+                <ui:VisualElement class="tutorial-panel-medium">
+                    <ui:Label text="1 planta por coluna&#10;e linha" class="tutorial-text" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+
+            <ui:VisualElement class="tutorial-item">
+                <ui:VisualElement class="tutorial-diagram diagram-adjacency" picking-mode="Ignore" />
+                <ui:VisualElement class="tutorial-panel-large">
+                    <ui:Label text="as plantas nao podem&#10;se tocar" class="tutorial-text" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

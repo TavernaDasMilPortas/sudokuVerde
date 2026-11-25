@@ -1,0 +1,128 @@
+[
+  {
+    "name": "variant_b_toggle_on_base",
+    "source": "Prancheta 1, vetores originais",
+    "png": "PNG/variant_b_toggle_on_base.png",
+    "svg": "SVG/variant_b_toggle_on_base.svg"
+  },
+  {
+    "name": "variant_b_toggle_off_base",
+    "source": "Prancheta 1, vetores originais",
+    "png": "PNG/variant_b_toggle_off_base.png",
+    "svg": "SVG/variant_b_toggle_off_base.svg"
+  },
+  {
+    "name": "variant_b_icon_music",
+    "source": "Prancheta 1, vetores originais",
+    "png": "PNG/variant_b_icon_music.png",
+    "svg": "SVG/variant_b_icon_music.svg"
+  },
+  {
+    "name": "variant_b_icon_vibration",
+    "source": "Prancheta 1, vetores originais",
+    "png": "PNG/variant_b_icon_vibration.png",
+    "svg": "SVG/variant_b_icon_vibration.svg"
+  },
+  {
+    "name": "variant_b_button_square_base",
+    "source": "Prancheta 5, vetores originais",
+    "png": "PNG/variant_b_button_square_base.png",
+    "svg": "SVG/variant_b_button_square_base.svg"
+  },
+  {
+    "name": "variant_b_icon_close",
+    "source": "Prancheta 5, vetores originais",
+    "png": "PNG/variant_b_icon_close.png",
+    "svg": "SVG/variant_b_icon_close.svg"
+  },
+  {
+    "name": "variant_b_rule_card_base",
+    "source": "Prancheta 5, vetores originais",
+    "png": "PNG/variant_b_rule_card_base.png",
+    "svg": "SVG/variant_b_rule_card_base.svg"
+  },
+  {
+    "name": "variant_b_instruction_card_plant_base",
+    "source": "Prancheta 4, vetores originais",
+    "png": "PNG/variant_b_instruction_card_plant_base.png",
+    "svg": "SVG/variant_b_instruction_card_plant_base.svg"
+  },
+  {
+    "name": "variant_b_instruction_card_cross_base",
+    "source": "Prancheta 4, vetores originais",
+    "png": "PNG/variant_b_instruction_card_cross_base.png",
+    "svg": "SVG/variant_b_instruction_card_cross_base.svg"
+  },
+  {
+    "name": "variant_b_instruction_icon_tile_base",
+    "source": "Prancheta 4, vetores originais",
+    "png": "PNG/variant_b_instruction_icon_tile_base.png",
+    "svg": "SVG/variant_b_instruction_icon_tile_base.svg"
+  },
+  {
+    "name": "variant_b_victory_panel_base",
+    "source": "Prancheta 6, vetores originais",
+    "png": "PNG/variant_b_victory_panel_base.png",
+    "svg": "SVG/variant_b_victory_panel_base.svg"
+  },
+  {
+    "name": "variant_b_victory_action_base",
+    "source": "Prancheta 6, vetores originais",
+    "png": "PNG/variant_b_victory_action_base.png",
+    "svg": "SVG/variant_b_victory_action_base.svg"
+  },
+  {
+    "name": "variant_b_icon_restart",
+    "source": "Prancheta 6, vetores originais",
+    "png": "PNG/variant_b_icon_restart.png",
+    "svg": "SVG/variant_b_icon_restart.svg"
+  },
+  {
+    "name": "variant_b_icon_next",
+    "source": "Prancheta 6, vetores originais",
+    "png": "PNG/variant_b_icon_next.png",
+    "svg": "SVG/variant_b_icon_next.svg"
+  },
+  {
+    "name": "variant_b_board_base",
+    "source": "Prancheta 5, vetores originais",
+    "png": "PNG/variant_b_board_base.png",
+    "svg": "SVG/variant_b_board_base.svg"
+  },
+  {
+    "name": "variant_b_header_level_base",
+    "source": "Prancheta 5, vetores originais",
+    "png": "PNG/variant_b_header_level_base.png",
+    "svg": "SVG/variant_b_header_level_base.svg"
+  },
+  {
+    "name": "variant_b_icon_cross_large",
+    "source": "Reconstituído a partir da marcação X tipográfica da prancheta 5",
+    "png": "PNG/variant_b_icon_cross_large.png",
+    "svg": "SVG/variant_b_icon_cross_large.svg"
+  },
+  {
+    "name": "variant_b_rule_color",
+    "source": "Prancheta 5, recorte original do diagrama com fundo creme",
+    "png": "PNG/variant_b_rule_color.png",
+    "svg": null
+  },
+  {
+    "name": "variant_b_rule_row_column",
+    "source": "Prancheta 5, recorte original do diagrama com fundo creme",
+    "png": "PNG/variant_b_rule_row_column.png",
+    "svg": null
+  },
+  {
+    "name": "variant_b_rule_adjacency",
+    "source": "Prancheta 5, recorte original do diagrama com fundo creme",
+    "png": "PNG/variant_b_rule_adjacency.png",
+    "svg": null
+  },
+  {
+    "name": "variant_b_overlay_dark",
+    "source": "Reconstituição aproximada do overlay escuro das pranchetas 4 e 6",
+    "png": "PNG/variant_b_overlay_dark.png",
+    "svg": "SVG/variant_b_overlay_dark.svg"
+  }
+]

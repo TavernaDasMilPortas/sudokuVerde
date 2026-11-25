@@ -1,0 +1,56 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="gameplay-screen" class="sv-screen bg-gameplay is-hidden">
+        <ui:VisualElement class="sv-header">
+            <ui:Button name="btn-gameplay-pause" class="sv-btn-icon" tooltip="Pausar jogo">
+                <ui:VisualElement class="sv-btn-icon__glyph glyph-back" picking-mode="Ignore" />
+            </ui:Button>
+
+            <ui:VisualElement class="sv-header__banner">
+                <ui:Label name="gameplay-level-label" text="NIVEL 01" class="sv-header__title" />
+            </ui:VisualElement>
+
+            <ui:Button name="btn-gameplay-help" class="sv-btn-icon" tooltip="Como jogar">
+                <ui:VisualElement class="sv-btn-icon__glyph glyph-help" picking-mode="Ignore" />
+            </ui:Button>
+        </ui:VisualElement>
+
+        <ui:VisualElement class="gameplay-content">
+            <ui:VisualElement class="plant-progress-pill" picking-mode="Ignore">
+                <ui:VisualElement class="plant-progress-icon" picking-mode="Ignore" />
+                <ui:Label name="plants-progress-label" text="0/4" class="plant-progress-text" picking-mode="Ignore" />
+            </ui:VisualElement>
+
+            <ui:VisualElement class="board-frame">
+                <ui:VisualElement name="board-grid" class="board-grid" />
+            </ui:VisualElement>
+
+            <ui:VisualElement class="gameplay-bottom-bar">
+                <ui:VisualElement class="action-slot">
+                    <ui:Button name="btn-tool-plant" class="sv-btn-action tool-btn--active">
+                        <ui:VisualElement class="action-icon-plant" picking-mode="Ignore" />
+                    </ui:Button>
+                    <ui:Label text="PLANTA" class="action-caption" />
+                </ui:VisualElement>
+
+                <ui:VisualElement class="action-slot">
+                    <ui:Button name="btn-tool-cross" class="sv-btn-action">
+                        <ui:VisualElement class="action-icon-cross" picking-mode="Ignore" />
+                    </ui:Button>
+                    <ui:Label text="MARCA X" class="action-caption" />
+                </ui:VisualElement>
+
+                <ui:VisualElement class="action-slot">
+                    <ui:VisualElement class="action-btn-wrap">
+                        <ui:Button name="btn-hint" class="sv-btn-action">
+                            <ui:VisualElement class="action-icon-hint" picking-mode="Ignore" />
+                        </ui:Button>
+                        <ui:VisualElement class="action-badge" picking-mode="Ignore">
+                            <ui:Label name="hints-remaining-label" text="3" class="action-badge__text" picking-mode="Ignore" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:Label text="DICA" class="action-caption" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

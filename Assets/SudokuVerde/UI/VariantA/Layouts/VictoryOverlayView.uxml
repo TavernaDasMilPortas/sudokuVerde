@@ -1,0 +1,23 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="victory-overlay" class="sv-overlay bg-overlay-green is-hidden">
+        <ui:VisualElement class="victory-top-bar">
+            <ui:Button name="btn-victory-close" class="sv-btn-icon" tooltip="Voltar ao menu">
+                <ui:VisualElement class="sv-btn-icon__glyph glyph-close" picking-mode="Ignore" />
+            </ui:Button>
+        </ui:VisualElement>
+
+        <ui:VisualElement class="victory-content">
+            <ui:VisualElement class="victory-title-panel">
+                <ui:Label text="FASE CONCLUIDA!" class="victory-title-text" />
+            </ui:VisualElement>
+
+            <ui:VisualElement class="victory-reward-panel">
+                <ui:VisualElement name="victory-sparkles" class="victory-sparkles" picking-mode="Ignore" />
+                <ui:VisualElement name="victory-plant" class="victory-plant" picking-mode="Ignore" />
+            </ui:VisualElement>
+
+            <ui:Button name="btn-victory-next" text="PROXIMA FASE" class="sv-btn-wide" />
+            <ui:Button name="btn-victory-menu" text="VOLTAR AO MENU" class="sv-btn-wide" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,18 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="../Styles/VariantB.uss" />
+    <ui:Template name="MainMenuViewB" src="MainMenuViewB.uxml" />
+    <ui:Template name="GameplayViewB" src="GameplayViewB.uxml" />
+    <ui:Template name="SettingsViewB" src="SettingsViewB.uxml" />
+    <ui:Template name="PauseOverlayViewB" src="PauseOverlayViewB.uxml" />
+    <ui:Template name="InstructionsOverlayViewB" src="InstructionsOverlayViewB.uxml" />
+    <ui:Template name="VictoryOverlayViewB" src="VictoryOverlayViewB.uxml" />
+
+    <ui:VisualElement name="sudoku-verde-root" class="sv-root">
+        <ui:Instance template="MainMenuViewB" name="main-menu-instance" picking-mode="Ignore" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0;" />
+        <ui:Instance template="GameplayViewB" name="gameplay-instance" picking-mode="Ignore" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0;" />
+        <ui:Instance template="SettingsViewB" name="settings-instance" picking-mode="Ignore" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0;" />
+        <ui:Instance template="PauseOverlayViewB" name="pause-instance" picking-mode="Ignore" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0;" />
+        <ui:Instance template="InstructionsOverlayViewB" name="tutorial-instance" picking-mode="Ignore" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0;" />
+        <ui:Instance template="VictoryOverlayViewB" name="victory-instance" picking-mode="Ignore" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0;" />
+    </ui:VisualElement>
+</ui:UXML>

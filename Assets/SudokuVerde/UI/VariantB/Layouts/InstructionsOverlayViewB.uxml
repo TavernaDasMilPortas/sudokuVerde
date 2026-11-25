@@ -1,0 +1,27 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="tutorial-overlay" class="sv-overlay bg-overlay-dark is-hidden">
+        <ui:VisualElement class="vb-top-bar">
+            <ui:Button name="btn-tutorial-back" class="vb-btn-square" tooltip="Fechar instruções">
+                <ui:VisualElement class="vb-glyph-close" picking-mode="Ignore" />
+            </ui:Button>
+        </ui:VisualElement>
+
+        <ui:VisualElement class="vb-instructions-content">
+            <ui:VisualElement class="vb-instr-card vb-instr-card--plant">
+                <ui:VisualElement class="vb-instr-tile" picking-mode="Ignore">
+                    <ui:VisualElement class="vb-instr-icon-plant" picking-mode="Ignore" />
+                </ui:VisualElement>
+                <ui:Label text="clique uma vez&#10;para posicionar&#10;plantas" class="vb-instr-text" />
+            </ui:VisualElement>
+
+            <ui:VisualElement class="vb-instr-card vb-instr-card--cross">
+                <ui:VisualElement class="vb-instr-tile" picking-mode="Ignore">
+                    <ui:VisualElement class="vb-instr-icon-cross" picking-mode="Ignore" />
+                </ui:VisualElement>
+                <ui:Label text="clique duas vezes&#10;para posicionar&#10;x" class="vb-instr-text" />
+            </ui:VisualElement>
+
+            <ui:Button name="btn-tutorial-confirm" text="ENTENDI" class="sv-btn-wide" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

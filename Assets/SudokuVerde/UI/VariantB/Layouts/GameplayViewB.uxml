@@ -1,0 +1,50 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="gameplay-screen" class="sv-screen bg-gameplay is-hidden">
+        <ui:VisualElement class="vb-top-bar">
+            <ui:Button name="btn-gameplay-pause" class="vb-btn-square" tooltip="Pausar jogo">
+                <ui:VisualElement class="vb-glyph-close" picking-mode="Ignore" />
+            </ui:Button>
+
+            <ui:VisualElement class="vb-level-tab">
+                <ui:Label name="gameplay-level-label" text="NIVEL 01" class="vb-level-tab__text" />
+            </ui:VisualElement>
+
+            <ui:VisualElement class="vb-hint-wrap">
+                <ui:Button name="btn-hint" class="vb-btn-square" tooltip="Usar dica">
+                    <ui:VisualElement class="vb-glyph-hint" picking-mode="Ignore" />
+                </ui:Button>
+                <ui:VisualElement class="vb-hint-badge" picking-mode="Ignore">
+                    <ui:Label name="hints-remaining-label" text="3" class="vb-hint-badge__text" picking-mode="Ignore" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <ui:VisualElement class="vb-gameplay-center">
+            <ui:VisualElement class="plant-progress-pill" picking-mode="Ignore">
+                <ui:VisualElement class="plant-progress-icon" picking-mode="Ignore" />
+                <ui:Label name="plants-progress-label" text="0/4" class="plant-progress-text" picking-mode="Ignore" />
+            </ui:VisualElement>
+
+            <ui:VisualElement class="vb-board-frame">
+                <ui:VisualElement name="board-grid" class="board-grid" />
+            </ui:VisualElement>
+
+            <ui:VisualElement class="vb-rules-row">
+                <ui:VisualElement class="vb-rule-card">
+                    <ui:VisualElement class="vb-rule-diagram vb-rule-color" picking-mode="Ignore" />
+                    <ui:Label text="1 planta&#10;por cor" class="vb-rule-text" />
+                </ui:VisualElement>
+
+                <ui:VisualElement class="vb-rule-card">
+                    <ui:VisualElement class="vb-rule-diagram vb-rule-rowcol" picking-mode="Ignore" />
+                    <ui:Label text="1 planta por&#10;coluna e linha" class="vb-rule-text" />
+                </ui:VisualElement>
+
+                <ui:VisualElement class="vb-rule-card">
+                    <ui:VisualElement class="vb-rule-diagram vb-rule-adj" picking-mode="Ignore" />
+                    <ui:Label text="plantas nao&#10;podem se tocar" class="vb-rule-text" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

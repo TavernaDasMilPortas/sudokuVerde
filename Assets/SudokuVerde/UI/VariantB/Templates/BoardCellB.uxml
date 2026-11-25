@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <ui:Button name="board-cell" class="board-cell cell--green">
+        <ui:VisualElement name="cell-plant-icon" class="cell-icon-plant is-hidden" picking-mode="Ignore" />
+        <ui:VisualElement name="cell-cross-icon" class="cell-icon-cross is-hidden" picking-mode="Ignore" />
+    </ui:Button>
+</ui:UXML>

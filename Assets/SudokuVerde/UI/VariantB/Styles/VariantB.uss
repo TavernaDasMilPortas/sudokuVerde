@@ -1,0 +1,781 @@
+/* Sudoku Verde — Variant B Stylesheet (Reference: 400 x 800, Safe Area + Crisp Icons) */
+
+.sv-root {
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    color: #231F20;
+}
+
+.sv-screen {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    padding: 28px 18px 28px 18px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: 180ms;
+    transition-timing-function: ease-out;
+}
+
+.sv-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    padding: 28px 18px 28px 18px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition-property: opacity, scale;
+    transition-duration: 180ms;
+    transition-timing-function: ease-out;
+}
+
+.is-hidden {
+    display: none;
+    opacity: 0;
+}
+
+/* Backgrounds */
+.bg-gradient {
+    background-image: url("project://database/Assets/SudokuVerde_Assets/PNG/background_gradient.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-gameplay {
+    background-image: url("project://database/Assets/SudokuVerde_Assets/PNG/background_gameplay.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-overlay-dark {
+    background-image: url("project://database/Assets/SudokuVerde_Assets/SudokuVerde_VariantB_Complemento/PNG/variant_b_overlay_dark.png");
+    background-color: rgba(18, 28, 12, 0.72);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Reusable Buttons */
+.vb-btn-square {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    padding: 9px;
+    margin: 0;
+    border-width: 4px;
+    border-color: #69B34C;
+    border-radius: 14px;
+    background-color: #EEF6C5;
+    align-items: center;
+    justify-content: center;
+    transition-property: scale, rotate;
+    transition-duration: 120ms;
+}
+
+.vb-btn-square:hover {
+    scale: 1.04 1.04;
+}
+
+.vb-btn-square:active {
+    scale: 0.93 0.93;
+}
+
+.vb-glyph-close {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    background-image: url("project://database/Assets/SudokuVerde_Assets/SudokuVerde_VariantB_Complemento/PNG/variant_b_icon_close.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.vb-glyph-back {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    background-image: url("project://database/Assets/SudokuVerde_Assets/PNG/icon_back.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    -unity-background-image-tint-color: #69B34C;
+}
+
+.vb-glyph-hint {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    background-image: url("project://database/Assets/SudokuVerde_Assets/PNG/icon_hint.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.sv-btn-wide {
+    width: 272px;
+    height: 54px;
+    flex-shrink: 0;
+    padding: 0 16px;
+    margin: 7px 0;
+    border-width: 4px;
+    border-color: #69B34C;
+    border-radius: 16px;
+    background-color: #EEF6C5;
+    font-size: 22px;
+    -unity-font-style: bold;
+    color: #231F20;
+    -unity-text-align: middle-center;
+    transition-property: scale, rotate;
+    transition-duration: 120ms;
+}
+
+.sv-btn-wide:hover {
+    scale: 1.03 1.03;
+}
+
+.sv-btn-wide:active {
+    scale: 0.95 0.95;
+}
+
+/* Main Menu B */
+.vb-menu-level-banner {
+    width: 268px;
+    height: 58px;
+    background-color: #EEF6C5;
+    border-width: 4px;
+    border-color: #69B34C;
+    border-radius: 16px;
+    align-items: center;
+    justify-content: center;
+}
+
+.vb-menu-level-text {
+    font-size: 30px;
+    -unity-font-style: bold;
+    color: #231F20;
+    -unity-text-align: middle-center;
+}
+
+.vb-menu-illustration {
+    width: 286px;
+    height: 228px;
+    margin-top: 18px;
+    flex-shrink: 0;
+    background-image: url("project://database/Assets/SudokuVerde_Assets/PNG/illustration_garden.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.vb-menu-title {
+    margin-top: 6px;
+    font-size: 46px;
+    -unity-font-style: bold;
+    color: #367B28;
+    -unity-text-align: middle-center;
+    white-space: normal;
+}
+
+.vb-menu-actions {
+    margin-top: 28px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Gameplay B */
+.vb-top-bar {
+    width: 100%;
+    max-width: 364px;
+    margin-bottom: 8px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+}
+
+.vb-hint-wrap {
+    position: relative;
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+}
+
+.vb-hint-badge {
+    position: absolute;
+    left: -12px;
+    top: -8px;
+    width: 30px;
+    height: 30px;
+    background-image: url("project://database/Assets/SudokuVerde_Assets/PNG/badge_base.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.vb-hint-badge__text {
+    font-size: 16px;
+    -unity-font-style: bold;
+    color: #FFFFFF;
+    -unity-text-align: middle-center;
+}
+
+.vb-level-tab {
+    height: 48px;
+    flex-grow: 1;
+    margin: 0 10px;
+    background-color: #EEF6C5;
+    border-width: 4px;
+    border-color: #69B34C;
+    border-radius: 16px;
+    align-items: center;
+    justify-content: center;
+}
+
+.vb-level-tab__text {
+    font-size: 24px;
+    -unity-font-style: bold;
+    color: #367B28;
+    -unity-text-align: middle-center;
+}
+
+.vb-gameplay-center {
+    flex-grow: 1;
+    width: 100%;
+    max-width: 364px;
+    align-items: center;
+    justify-content: center;
+}
+
+.plant-progress-pill {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 16px;
+    margin-bottom: 10px;
+    background-color: #EEF6C5;
+    border-width: 3px;
+    border-color: #69B34C;
+    border-radius: 16px;
+}
+
+.plant-progress-icon {
+    width: 24px;
+    height: 28px;
+    margin-right: 8px;
+    flex-shrink: 0;
+    background-image: url("project://database/Assets/SudokuVerde_Assets/PNG/icon_plant.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.plant-progress-text {
+    font-size: 20px;
+    -unity-font-style: bold;
+    color: #231F20;
+    -unity-text-align: middle-center;
+}
+
+.vb-board-frame {
+    width: 356px;
+    height: 356px;
+    padding: 12px;
+    background-color: #EEF6C5;
+    border-width: 5px;
+    border-color: #69B34C;
+    border-radius: 22px;
+    align-items: center;
+    justify-content: center;
+}
+
+.board-grid {
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-between;
+}
+
+.board-cell {
+    width: 23.8%;
+    height: 23.8%;
+    margin: 0;
+    padding: 6px;
+    border-width: 0;
+    border-radius: 12px;
+    background-color: transparent;
+    align-items: center;
+    justify-content: center;
+    transition-property: scale;
+    transition-duration: 90ms;
+}
+
+.board-cell:hover {
+    scale: 1.03 1.03;
+}
+
+.board-cell:active {
+    scale: 0.92 0.92;
+}
+
+.cell--orange {
+    background-color: #F4A259;
+}
+
+.cell--blue {
+    background-color: #82B3E2;
+}
+
+.cell--green {
+    background-color: #6BBF47;
+}
+
+.cell--light-green {
+    background-color: #A9D46D;
+}
+
+.cell--player-plant {
+    border-width: 3px;
+    border-color: #FFFFFF;
+}
+
+.cell--hinted {
+    border-width: 4px;
+    border-color: #FFD600;
+}
+
+.cell--conflict {
+    border-width: 4px;
+    border-color: #D9362B;
+}
+
+.cell-icon-plant {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    background-image: url("project://database/Assets/SudokuVerde_Assets/PNG/icon_plant.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.cell-icon-cross {
+    width: 90%;
+    height: 90%;
+    flex-shrink: 0;
+    background-image: url("project://database/Assets/SudokuVerde_Assets/PNG/icon_cross.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Permanent Bottom Rules Row */
+.vb-rules-row {
+    width: 100%;
+    margin-top: 12px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.vb-rule-card {
+    width: 32%;
+    height: 168px;
+    padding: 8px 6px;
+    background-color: #EEF6C5;
+    border-width: 4px;
+    border-color: #69B34C;
+    border-radius: 16px;
+    align-items: center;
+    justify-content: center;
+}
+
+.vb-rule-diagram {
+    width: 94px;
+    height: 90px;
+    margin-bottom: 6px;
+    flex-shrink: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.vb-rule-color {
+    background-image: url("project://database/Assets/SudokuVerde_Assets/SudokuVerde_VariantB_Complemento/PNG/variant_b_rule_color.png");
+}
+
+.vb-rule-rowcol {
+    background-image: url("project://database/Assets/SudokuVerde_Assets/SudokuVerde_VariantB_Complemento/PNG/variant_b_rule_row_column.png");
+}
+
+.vb-rule-adj {
+    background-image: url("project://database/Assets/SudokuVerde_Assets/SudokuVerde_VariantB_Complemento/PNG/variant_b_rule_adjacency.png");
+}
+
+.vb-rule-text {
+    font-size: 13px;
+    -unity-font-style: bold;
+    color: #231F20;
+    -unity-text-align: middle-center;
+    white-space: normal;
+}
+
+/* Instructions Overlay B */
+.vb-instructions-content {
+    flex-grow: 1;
+    width: 100%;
+    max-width: 364px;
+    align-items: center;
+    justify-content: center;
+}
+
+.vb-instr-card {
+    width: 100%;
+    min-height: 124px;
+    margin: 12px 0;
+    padding: 12px 14px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #EEF6C5;
+    border-width: 5px;
+    border-color: #69B34C;
+    border-radius: 22px;
+}
+
+.vb-instr-tile {
+    width: 88px;
+    height: 88px;
+    flex-shrink: 0;
+    padding: 10px;
+    background-color: #6BBF47;
+    border-radius: 16px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+}
+
+.vb-instr-icon-plant {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    background-image: url("project://database/Assets/SudokuVerde_Assets/PNG/icon_plant.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.vb-instr-icon-cross {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    background-image: url("project://database/Assets/SudokuVerde_Assets/SudokuVerde_VariantB_Complemento/PNG/variant_b_icon_cross_large.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.vb-instr-text {
+    flex-grow: 1;
+    flex-shrink: 1;
+    font-size: 19px;
+    -unity-font-style: bold;
+    color: #231F20;
+    -unity-text-align: middle-center;
+    white-space: normal;
+}
+
+/* Settings B */
+.vb-settings-banner {
+    width: 100%;
+    max-width: 320px;
+    height: 54px;
+    margin-top: 8px;
+    background-color: #EEF6C5;
+    border-width: 4px;
+    border-color: #69B34C;
+    border-radius: 16px;
+    align-items: center;
+    justify-content: center;
+}
+
+.vb-settings-title {
+    font-size: 25px;
+    -unity-font-style: bold;
+    color: #231F20;
+    -unity-text-align: middle-center;
+}
+
+.vb-settings-list {
+    flex-grow: 1;
+    width: 100%;
+    max-width: 340px;
+    align-items: center;
+    justify-content: center;
+}
+
+.vb-settings-block {
+    width: 100%;
+    align-items: center;
+    margin: 16px 0;
+}
+
+.vb-settings-header-row {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.vb-settings-icon {
+    width: 36px;
+    height: 36px;
+    margin-right: 10px;
+    flex-shrink: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.vb-icon-music {
+    background-image: url("project://database/Assets/SudokuVerde_Assets/SudokuVerde_VariantB_Complemento/PNG/variant_b_icon_music.png");
+}
+
+.vb-icon-vibration {
+    background-image: url("project://database/Assets/SudokuVerde_Assets/SudokuVerde_VariantB_Complemento/PNG/variant_b_icon_vibration.png");
+}
+
+.vb-settings-row-label {
+    font-size: 22px;
+    -unity-font-style: bold;
+    color: #231F20;
+}
+
+.vb-settings-variant-caption {
+    font-size: 20px;
+    -unity-font-style: bold;
+    color: #231F20;
+    margin-bottom: 8px;
+    -unity-text-align: middle-center;
+}
+
+.vb-seg-toggle {
+    width: 284px;
+    height: 52px;
+    margin: 0;
+    padding: 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    border-width: 4px;
+    border-color: #69B34C;
+    border-radius: 16px;
+    background-color: #D2DFB6;
+    transition-property: scale;
+    transition-duration: 90ms;
+}
+
+.vb-seg-toggle:active {
+    scale: 0.96 0.96;
+}
+
+.vb-seg-toggle--off {
+    background-image: url("project://database/Assets/SudokuVerde_Assets/SudokuVerde_VariantB_Complemento/PNG/variant_b_toggle_off_base.png");
+    background-size: 100% 100%;
+    border-width: 0;
+    background-color: transparent;
+}
+
+.vb-seg-toggle--on {
+    background-image: url("project://database/Assets/SudokuVerde_Assets/SudokuVerde_VariantB_Complemento/PNG/variant_b_toggle_on_base.png");
+    background-size: 100% 100%;
+    border-width: 0;
+    background-color: transparent;
+}
+
+.vb-seg-toggle > .unity-toggle__input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.vb-seg-option {
+    width: 50%;
+    font-size: 16px;
+    -unity-font-style: bold;
+    color: #231F20;
+    -unity-text-align: middle-center;
+}
+
+/* Pause Overlay B */
+.pause-backdrop {
+    flex-grow: 1;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.pause-card {
+    width: 336px;
+    padding: 24px 20px;
+    background-color: #EEF6C5;
+    border-width: 4px;
+    border-color: #69B34C;
+    border-radius: 24px;
+    align-items: center;
+}
+
+.pause-title {
+    font-size: 26px;
+    -unity-font-style: bold;
+    color: #231F20;
+    margin-bottom: 14px;
+    -unity-text-align: middle-center;
+}
+
+/* Victory Overlay B */
+.vb-victory-content {
+    flex-grow: 1;
+    width: 100%;
+    max-width: 356px;
+    align-items: center;
+    justify-content: center;
+}
+
+.vb-victory-panel {
+    width: 100%;
+    height: 300px;
+    background-color: #EEF6C5;
+    border-width: 5px;
+    border-color: #69B34C;
+    border-radius: 26px;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    margin-bottom: 22px;
+}
+
+.vb-victory-title {
+    font-size: 36px;
+    -unity-font-style: bold;
+    color: #231F20;
+    -unity-text-align: middle-center;
+    margin-bottom: 8px;
+}
+
+.vb-victory-art {
+    width: 210px;
+    height: 190px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.victory-sparkles {
+    position: absolute;
+    width: 200px;
+    height: 188px;
+    background-image: url("project://database/Assets/SudokuVerde_Assets/PNG/sparkles_victory.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition-property: scale;
+    transition-duration: 360ms;
+}
+
+.victory-plant {
+    width: 104px;
+    height: 138px;
+    background-image: url("project://database/Assets/SudokuVerde_Assets/PNG/icon_plant_victory.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition-property: scale;
+    transition-duration: 300ms;
+}
+
+.victory-celebrate {
+    scale: 1.08 1.08;
+}
+
+.vb-victory-actions {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.vb-victory-action-btn {
+    width: 148px;
+    height: 148px;
+    padding: 24px;
+    margin: 0;
+    border-width: 5px;
+    border-color: #69B34C;
+    border-radius: 26px;
+    background-color: #EEF6C5;
+    align-items: center;
+    justify-content: center;
+    transition-property: scale;
+    transition-duration: 90ms;
+}
+
+.vb-victory-action-btn:hover {
+    scale: 1.04 1.04;
+}
+
+.vb-victory-action-btn:active {
+    scale: 0.94 0.94;
+}
+
+.vb-victory-icon-restart {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    background-image: url("project://database/Assets/SudokuVerde_Assets/SudokuVerde_VariantB_Complemento/PNG/variant_b_icon_restart.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.vb-victory-icon-next {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    background-image: url("project://database/Assets/SudokuVerde_Assets/SudokuVerde_VariantB_Complemento/PNG/variant_b_icon_next.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Idle nudge animations */
+.nudge-left {
+    scale: 1.14 1.14;
+    rotate: -10deg;
+}
+
+.nudge-right {
+    scale: 1.14 1.14;
+    rotate: 10deg;
+}

@@ -1,0 +1,16 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="main-menu-screen" class="sv-screen bg-gradient">
+        <ui:VisualElement class="vb-menu-level-banner">
+            <ui:Label name="menu-level-label" text="Nivel 1" class="vb-menu-level-text" />
+        </ui:VisualElement>
+
+        <ui:VisualElement class="vb-menu-illustration" picking-mode="Ignore" />
+
+        <ui:Label text="Sudoku&#10;Verde" class="vb-menu-title" />
+
+        <ui:VisualElement class="vb-menu-actions">
+            <ui:Button name="btn-play" text="JOGAR" class="sv-btn-wide" />
+            <ui:Button name="btn-menu-settings" text="configurações" class="sv-btn-wide" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
