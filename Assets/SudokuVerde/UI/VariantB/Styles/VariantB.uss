@@ -1,4 +1,4 @@
-/* Sudoku Verde — Variant B Stylesheet (Reference: 400 x 800, Safe Area + Crisp Icons) */
+/* Sudoku Verde — Variant B Stylesheet (Reference: 1080 x 1920, Safe Area + Crisp Icons) */
 
 .sv-root {
     flex-grow: 1;
@@ -17,7 +17,7 @@
     bottom: 0;
     width: 100%;
     height: 100%;
-    padding: 28px 18px 28px 18px;
+    padding: 112px 43px 67px 43px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -35,7 +35,7 @@
     bottom: 0;
     width: 100%;
     height: 100%;
-    padding: 28px 18px 28px 18px;
+    padding: 112px 43px 67px 43px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -43,6 +43,63 @@
     transition-property: opacity, scale;
     transition-duration: 180ms;
     transition-timing-function: ease-out;
+}
+
+.sv-level-selector {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 653px;
+    height: 130px;
+    min-height: 130px;
+    flex-shrink: 0;
+    padding: 0 18px;
+    margin-bottom: 24px;
+    background-color: #EEF6C5;
+    border-width: 10px;
+    border-color: #69B34C;
+    border-radius: 38px;
+}
+
+.sv-level-btn {
+    width: 88px;
+    height: 88px;
+    flex-shrink: 0;
+    background-color: #69B34C;
+    color: #FFFFFF;
+    font-size: 52px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    border-width: 0;
+    border-radius: 24px;
+    padding: 0;
+    margin: 0;
+}
+
+.sv-level-btn:hover {
+    scale: 1.05 1.05;
+}
+
+.sv-level-btn:active {
+    scale: 0.93 0.93;
+}
+
+.sv-level-label {
+    flex-grow: 1;
+    font-size: 56px;
+    -unity-font-style: bold;
+    color: #231F20;
+    -unity-text-align: middle-center;
+}
+
+.sv-btn-icon--red {
+    background-color: #D94848;
+    border-color: #A62B2B;
+    border-radius: 34px;
+}
+
+.sv-btn-icon--red .vb-glyph-close {
+    -unity-background-image-tint-color: #FFFFFF;
 }
 
 .is-hidden {
@@ -72,14 +129,14 @@
 
 /* Reusable Buttons */
 .vb-btn-square {
-    width: 52px;
-    height: 52px;
+    width: 125px;
+    height: 125px;
     flex-shrink: 0;
-    padding: 9px;
+    padding: 22px;
     margin: 0;
-    border-width: 4px;
+    border-width: 10px;
     border-color: #69B34C;
-    border-radius: 14px;
+    border-radius: 34px;
     background-color: #EEF6C5;
     align-items: center;
     justify-content: center;
@@ -101,7 +158,7 @@
     flex-shrink: 0;
     background-image: url("project://database/Assets/SudokuVerde_Assets/SudokuVerde_VariantB_Complemento/PNG/variant_b_icon_close.png");
     background-size: contain;
-    background-repeat: no-repeat;
+    flex-shrink: 0;    background-repeat: no-repeat;
     background-position: center;
 }
 
@@ -111,7 +168,7 @@
     flex-shrink: 0;
     background-image: url("project://database/Assets/SudokuVerde_Assets/PNG/icon_back.png");
     background-size: contain;
-    background-repeat: no-repeat;
+    flex-shrink: 0;    background-repeat: no-repeat;
     background-position: center;
     -unity-background-image-tint-color: #69B34C;
 }
@@ -122,21 +179,23 @@
     flex-shrink: 0;
     background-image: url("project://database/Assets/SudokuVerde_Assets/PNG/icon_hint.png");
     background-size: contain;
-    background-repeat: no-repeat;
+    flex-shrink: 0;    background-repeat: no-repeat;
     background-position: center;
 }
 
 .sv-btn-wide {
-    width: 272px;
-    height: 54px;
+    width: 653px;
+    height: 130px;
+    min-height: 130px;
     flex-shrink: 0;
-    padding: 0 16px;
-    margin: 7px 0;
-    border-width: 4px;
+    flex-shrink: 0;
+    padding: 0 38px;
+    margin: 17px 0;
+    border-width: 10px;
     border-color: #69B34C;
-    border-radius: 16px;
+    border-radius: 38px;
     background-color: #EEF6C5;
-    font-size: 22px;
+    font-size: 53px;
     -unity-font-style: bold;
     color: #231F20;
     -unity-text-align: middle-center;
@@ -154,37 +213,37 @@
 
 /* Main Menu B */
 .vb-menu-level-banner {
-    width: 268px;
-    height: 58px;
+    width: 643px;
+    height: 139px;
     background-color: #EEF6C5;
-    border-width: 4px;
+    border-width: 10px;
     border-color: #69B34C;
-    border-radius: 16px;
+    border-radius: 38px;
     align-items: center;
     justify-content: center;
 }
 
 .vb-menu-level-text {
-    font-size: 30px;
+    font-size: 72px;
     -unity-font-style: bold;
     color: #231F20;
     -unity-text-align: middle-center;
 }
 
 .vb-menu-illustration {
-    width: 286px;
-    height: 228px;
-    margin-top: 18px;
+    width: 686px;
+    height: 547px;
+    margin-top: 43px;
     flex-shrink: 0;
     background-image: url("project://database/Assets/SudokuVerde_Assets/PNG/illustration_garden.png");
     background-size: contain;
-    background-repeat: no-repeat;
+    flex-shrink: 0;    background-repeat: no-repeat;
     background-position: center;
 }
 
 .vb-menu-title {
-    margin-top: 6px;
-    font-size: 46px;
+    margin-top: 14px;
+    font-size: 110px;
     -unity-font-style: bold;
     color: #367B28;
     -unity-text-align: middle-center;
@@ -192,7 +251,7 @@
 }
 
 .vb-menu-actions {
-    margin-top: 28px;
+    margin-top: 67px;
     align-items: center;
     justify-content: center;
 }
@@ -200,8 +259,8 @@
 /* Gameplay B */
 .vb-top-bar {
     width: 100%;
-    max-width: 364px;
-    margin-bottom: 8px;
+    max-width: 874px;
+    margin-bottom: 19px;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -210,46 +269,46 @@
 
 .vb-hint-wrap {
     position: relative;
-    width: 52px;
-    height: 52px;
+    width: 125px;
+    height: 125px;
     flex-shrink: 0;
 }
 
 .vb-hint-badge {
     position: absolute;
-    left: -12px;
-    top: -8px;
-    width: 30px;
-    height: 30px;
+    left: -29px;
+    top: -19px;
+    width: 72px;
+    height: 72px;
     background-image: url("project://database/Assets/SudokuVerde_Assets/PNG/badge_base.png");
     background-size: contain;
-    background-repeat: no-repeat;
+    flex-shrink: 0;    background-repeat: no-repeat;
     background-position: center;
     align-items: center;
     justify-content: center;
 }
 
 .vb-hint-badge__text {
-    font-size: 16px;
+    font-size: 38px;
     -unity-font-style: bold;
     color: #FFFFFF;
     -unity-text-align: middle-center;
 }
 
 .vb-level-tab {
-    height: 48px;
+    height: 115px;
     flex-grow: 1;
-    margin: 0 10px;
+    margin: 0 24px;
     background-color: #EEF6C5;
-    border-width: 4px;
+    border-width: 10px;
     border-color: #69B34C;
-    border-radius: 16px;
+    border-radius: 38px;
     align-items: center;
     justify-content: center;
 }
 
 .vb-level-tab__text {
-    font-size: 24px;
+    font-size: 58px;
     -unity-font-style: bold;
     color: #367B28;
     -unity-text-align: middle-center;
@@ -258,7 +317,7 @@
 .vb-gameplay-center {
     flex-grow: 1;
     width: 100%;
-    max-width: 364px;
+    max-width: 874px;
     align-items: center;
     justify-content: center;
 }
@@ -267,40 +326,40 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding: 5px 16px;
-    margin-bottom: 10px;
+    padding: 12px 38px;
+    margin-bottom: 24px;
     background-color: #EEF6C5;
-    border-width: 3px;
+    border-width: 7px;
     border-color: #69B34C;
-    border-radius: 16px;
+    border-radius: 38px;
 }
 
 .plant-progress-icon {
-    width: 24px;
-    height: 28px;
-    margin-right: 8px;
+    width: 58px;
+    height: 67px;
+    margin-right: 19px;
     flex-shrink: 0;
     background-image: url("project://database/Assets/SudokuVerde_Assets/PNG/icon_plant.png");
     background-size: contain;
-    background-repeat: no-repeat;
+    flex-shrink: 0;    background-repeat: no-repeat;
     background-position: center;
 }
 
 .plant-progress-text {
-    font-size: 20px;
+    font-size: 48px;
     -unity-font-style: bold;
     color: #231F20;
     -unity-text-align: middle-center;
 }
 
 .vb-board-frame {
-    width: 356px;
-    height: 356px;
-    padding: 12px;
+    width: 854px;
+    height: 854px;
+    padding: 29px;
     background-color: #EEF6C5;
-    border-width: 5px;
+    border-width: 12px;
     border-color: #69B34C;
-    border-radius: 22px;
+    border-radius: 53px;
     align-items: center;
     justify-content: center;
 }
@@ -315,12 +374,12 @@
 }
 
 .board-cell {
-    width: 23.8%;
-    height: 23.8%;
-    margin: 0;
-    padding: 6px;
+    width: 22.5%;
+    height: 22.5%;
+    margin: 1.25%;
+    padding: 14px;
     border-width: 0;
-    border-radius: 12px;
+    border-radius: 29px;
     background-color: transparent;
     align-items: center;
     justify-content: center;
@@ -353,17 +412,17 @@
 }
 
 .cell--player-plant {
-    border-width: 3px;
+    border-width: 7px;
     border-color: #FFFFFF;
 }
 
 .cell--hinted {
-    border-width: 4px;
+    border-width: 10px;
     border-color: #FFD600;
 }
 
 .cell--conflict {
-    border-width: 4px;
+    border-width: 10px;
     border-color: #D9362B;
 }
 
@@ -373,7 +432,7 @@
     flex-shrink: 0;
     background-image: url("project://database/Assets/SudokuVerde_Assets/PNG/icon_plant.png");
     background-size: contain;
-    background-repeat: no-repeat;
+    flex-shrink: 0;    background-repeat: no-repeat;
     background-position: center;
 }
 
@@ -383,14 +442,14 @@
     flex-shrink: 0;
     background-image: url("project://database/Assets/SudokuVerde_Assets/PNG/icon_cross.png");
     background-size: contain;
-    background-repeat: no-repeat;
+    flex-shrink: 0;    background-repeat: no-repeat;
     background-position: center;
 }
 
 /* Permanent Bottom Rules Row */
 .vb-rules-row {
     width: 100%;
-    margin-top: 12px;
+    margin-top: 29px;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -398,23 +457,23 @@
 
 .vb-rule-card {
     width: 32%;
-    height: 168px;
-    padding: 8px 6px;
+    height: 403px;
+    padding: 19px 14px;
     background-color: #EEF6C5;
-    border-width: 4px;
+    border-width: 10px;
     border-color: #69B34C;
-    border-radius: 16px;
+    border-radius: 38px;
     align-items: center;
     justify-content: center;
 }
 
 .vb-rule-diagram {
-    width: 94px;
-    height: 90px;
-    margin-bottom: 6px;
+    width: 226px;
+    height: 216px;
+    margin-bottom: 14px;
     flex-shrink: 0;
     background-size: contain;
-    background-repeat: no-repeat;
+    flex-shrink: 0;    background-repeat: no-repeat;
     background-position: center;
 }
 
@@ -431,7 +490,7 @@
 }
 
 .vb-rule-text {
-    font-size: 13px;
+    font-size: 31px;
     -unity-font-style: bold;
     color: #231F20;
     -unity-text-align: middle-center;
@@ -442,35 +501,35 @@
 .vb-instructions-content {
     flex-grow: 1;
     width: 100%;
-    max-width: 364px;
+    max-width: 874px;
     align-items: center;
     justify-content: center;
 }
 
 .vb-instr-card {
     width: 100%;
-    min-height: 124px;
-    margin: 12px 0;
-    padding: 12px 14px;
+    min-height: 298px;
+    margin: 29px 0;
+    padding: 29px 34px;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     background-color: #EEF6C5;
-    border-width: 5px;
+    border-width: 12px;
     border-color: #69B34C;
-    border-radius: 22px;
+    border-radius: 53px;
 }
 
 .vb-instr-tile {
-    width: 88px;
-    height: 88px;
+    width: 211px;
+    height: 211px;
     flex-shrink: 0;
-    padding: 10px;
+    padding: 24px;
     background-color: #6BBF47;
-    border-radius: 16px;
+    border-radius: 38px;
     align-items: center;
     justify-content: center;
-    margin-right: 12px;
+    margin-right: 29px;
 }
 
 .vb-instr-icon-plant {
@@ -479,7 +538,7 @@
     flex-shrink: 0;
     background-image: url("project://database/Assets/SudokuVerde_Assets/PNG/icon_plant.png");
     background-size: contain;
-    background-repeat: no-repeat;
+    flex-shrink: 0;    background-repeat: no-repeat;
     background-position: center;
 }
 
@@ -489,14 +548,14 @@
     flex-shrink: 0;
     background-image: url("project://database/Assets/SudokuVerde_Assets/SudokuVerde_VariantB_Complemento/PNG/variant_b_icon_cross_large.png");
     background-size: contain;
-    background-repeat: no-repeat;
+    flex-shrink: 0;    background-repeat: no-repeat;
     background-position: center;
 }
 
 .vb-instr-text {
     flex-grow: 1;
     flex-shrink: 1;
-    font-size: 19px;
+    font-size: 46px;
     -unity-font-style: bold;
     color: #231F20;
     -unity-text-align: middle-center;
@@ -506,19 +565,19 @@
 /* Settings B */
 .vb-settings-banner {
     width: 100%;
-    max-width: 320px;
-    height: 54px;
-    margin-top: 8px;
+    max-width: 768px;
+    height: 130px;
+    margin-top: 19px;
     background-color: #EEF6C5;
-    border-width: 4px;
+    border-width: 10px;
     border-color: #69B34C;
-    border-radius: 16px;
+    border-radius: 38px;
     align-items: center;
     justify-content: center;
 }
 
 .vb-settings-title {
-    font-size: 25px;
+    font-size: 60px;
     -unity-font-style: bold;
     color: #231F20;
     -unity-text-align: middle-center;
@@ -527,7 +586,7 @@
 .vb-settings-list {
     flex-grow: 1;
     width: 100%;
-    max-width: 340px;
+    max-width: 816px;
     align-items: center;
     justify-content: center;
 }
@@ -535,23 +594,23 @@
 .vb-settings-block {
     width: 100%;
     align-items: center;
-    margin: 16px 0;
+    margin: 38px 0;
 }
 
 .vb-settings-header-row {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-bottom: 8px;
+    margin-bottom: 19px;
 }
 
 .vb-settings-icon {
-    width: 36px;
-    height: 36px;
-    margin-right: 10px;
+    width: 86px;
+    height: 86px;
+    margin-right: 24px;
     flex-shrink: 0;
     background-size: contain;
-    background-repeat: no-repeat;
+    flex-shrink: 0;    background-repeat: no-repeat;
     background-position: center;
 }
 
@@ -564,30 +623,30 @@
 }
 
 .vb-settings-row-label {
-    font-size: 22px;
+    font-size: 53px;
     -unity-font-style: bold;
     color: #231F20;
 }
 
 .vb-settings-variant-caption {
-    font-size: 20px;
+    font-size: 48px;
     -unity-font-style: bold;
     color: #231F20;
-    margin-bottom: 8px;
+    margin-bottom: 19px;
     -unity-text-align: middle-center;
 }
 
 .vb-seg-toggle {
-    width: 284px;
-    height: 52px;
+    width: 682px;
+    height: 125px;
     margin: 0;
     padding: 0;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    border-width: 4px;
+    border-width: 10px;
     border-color: #69B34C;
-    border-radius: 16px;
+    border-radius: 38px;
     background-color: #D2DFB6;
     transition-property: scale;
     transition-duration: 90ms;
@@ -622,7 +681,7 @@
 
 .vb-seg-option {
     width: 50%;
-    font-size: 16px;
+    font-size: 38px;
     -unity-font-style: bold;
     color: #231F20;
     -unity-text-align: middle-center;
@@ -637,20 +696,20 @@
 }
 
 .pause-card {
-    width: 336px;
-    padding: 24px 20px;
+    width: 806px;
+    padding: 58px 48px;
     background-color: #EEF6C5;
-    border-width: 4px;
+    border-width: 10px;
     border-color: #69B34C;
-    border-radius: 24px;
+    border-radius: 58px;
     align-items: center;
 }
 
 .pause-title {
-    font-size: 26px;
+    font-size: 62px;
     -unity-font-style: bold;
     color: #231F20;
-    margin-bottom: 14px;
+    margin-bottom: 34px;
     -unity-text-align: middle-center;
 }
 
@@ -658,35 +717,35 @@
 .vb-victory-content {
     flex-grow: 1;
     width: 100%;
-    max-width: 356px;
+    max-width: 854px;
     align-items: center;
     justify-content: center;
 }
 
 .vb-victory-panel {
     width: 100%;
-    height: 300px;
+    height: 720px;
     background-color: #EEF6C5;
-    border-width: 5px;
+    border-width: 12px;
     border-color: #69B34C;
-    border-radius: 26px;
+    border-radius: 62px;
     align-items: center;
     justify-content: center;
-    padding: 16px;
-    margin-bottom: 22px;
+    padding: 38px;
+    margin-bottom: 53px;
 }
 
 .vb-victory-title {
-    font-size: 36px;
+    font-size: 86px;
     -unity-font-style: bold;
     color: #231F20;
     -unity-text-align: middle-center;
-    margin-bottom: 8px;
+    margin-bottom: 19px;
 }
 
 .vb-victory-art {
-    width: 210px;
-    height: 190px;
+    width: 504px;
+    height: 456px;
     align-items: center;
     justify-content: center;
     position: relative;
@@ -694,22 +753,22 @@
 
 .victory-sparkles {
     position: absolute;
-    width: 200px;
-    height: 188px;
+    width: 480px;
+    height: 451px;
     background-image: url("project://database/Assets/SudokuVerde_Assets/PNG/sparkles_victory.png");
     background-size: contain;
-    background-repeat: no-repeat;
+    flex-shrink: 0;    background-repeat: no-repeat;
     background-position: center;
     transition-property: scale;
     transition-duration: 360ms;
 }
 
 .victory-plant {
-    width: 104px;
-    height: 138px;
+    width: 250px;
+    height: 331px;
     background-image: url("project://database/Assets/SudokuVerde_Assets/PNG/icon_plant_victory.png");
     background-size: contain;
-    background-repeat: no-repeat;
+    flex-shrink: 0;    background-repeat: no-repeat;
     background-position: center;
     transition-property: scale;
     transition-duration: 300ms;
@@ -727,13 +786,13 @@
 }
 
 .vb-victory-action-btn {
-    width: 148px;
-    height: 148px;
-    padding: 24px;
+    width: 355px;
+    height: 355px;
+    padding: 58px;
     margin: 0;
-    border-width: 5px;
+    border-width: 12px;
     border-color: #69B34C;
-    border-radius: 26px;
+    border-radius: 62px;
     background-color: #EEF6C5;
     align-items: center;
     justify-content: center;
@@ -755,7 +814,7 @@
     flex-shrink: 0;
     background-image: url("project://database/Assets/SudokuVerde_Assets/SudokuVerde_VariantB_Complemento/PNG/variant_b_icon_restart.png");
     background-size: contain;
-    background-repeat: no-repeat;
+    flex-shrink: 0;    background-repeat: no-repeat;
     background-position: center;
 }
 
@@ -765,7 +824,7 @@
     flex-shrink: 0;
     background-image: url("project://database/Assets/SudokuVerde_Assets/SudokuVerde_VariantB_Complemento/PNG/variant_b_icon_next.png");
     background-size: contain;
-    background-repeat: no-repeat;
+    flex-shrink: 0;    background-repeat: no-repeat;
     background-position: center;
 }
 

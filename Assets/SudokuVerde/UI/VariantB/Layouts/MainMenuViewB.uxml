@@ -1,7 +1,14 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
     <ui:VisualElement name="main-menu-screen" class="sv-screen bg-gradient">
-        <ui:VisualElement class="vb-menu-level-banner">
-            <ui:Label name="menu-level-label" text="Nivel 1" class="vb-menu-level-text" />
+        <ui:VisualElement style="width: 100%; max-width: 874px; flex-direction: row; justify-content: flex-end; margin-bottom: 12px;">
+            <ui:Button name="btn-quit" class="vb-btn-square sv-btn-icon--red" tooltip="Sair">
+                <ui:VisualElement class="vb-glyph-close" picking-mode="Ignore" />
+            </ui:Button>
+        </ui:VisualElement>
+        <ui:VisualElement class="sv-level-selector">
+            <ui:Button name="btn-prev-level" text="&lt;" class="sv-level-btn" />
+            <ui:Label name="menu-level-label" text="Nivel 1" class="sv-level-label" />
+            <ui:Button name="btn-next-level" text="&gt;" class="sv-level-btn" />
         </ui:VisualElement>
 
         <ui:VisualElement class="vb-menu-illustration" picking-mode="Ignore" />
@@ -11,6 +18,16 @@
         <ui:VisualElement class="vb-menu-actions">
             <ui:Button name="btn-play" text="JOGAR" class="sv-btn-wide" />
             <ui:Button name="btn-menu-settings" text="configurações" class="sv-btn-wide" />
+        </ui:VisualElement>
+
+        <ui:VisualElement name="quit-confirm-overlay" class="sv-overlay bg-overlay-dark is-hidden">
+            <ui:VisualElement class="pause-backdrop">
+                <ui:VisualElement class="pause-card">
+                    <ui:Label text="Deseja mesmo sair?" class="pause-title" />
+                    <ui:Button name="btn-quit-confirm" text="SIM" class="sv-btn-wide" />
+                    <ui:Button name="btn-quit-cancel" text="NAO" class="sv-btn-wide" />
+                </ui:VisualElement>
+            </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

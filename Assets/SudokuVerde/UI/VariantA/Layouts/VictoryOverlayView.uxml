@@ -17,6 +17,7 @@
             </ui:VisualElement>
 
             <ui:Button name="btn-victory-next" text="PROXIMA FASE" class="sv-btn-wide" />
+            <ui:Button name="btn-victory-restart" text="JOGAR NOVAMENTE" class="sv-btn-wide" />
             <ui:Button name="btn-victory-menu" text="VOLTAR AO MENU" class="sv-btn-wide" />
         </ui:VisualElement>
     </ui:VisualElement>

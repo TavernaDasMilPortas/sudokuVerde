@@ -1,4 +1,4 @@
-/* Sudoku Verde — Variant A Stylesheet (Reference: 400 x 800, Safe Area + Crisp Icons) */
+/* Sudoku Verde — Variant A Stylesheet (Reference: 1080 x 1920, Safe Area + Crisp Icons) */
 
 .sv-root {
     flex-grow: 1;
@@ -17,7 +17,7 @@
     bottom: 0;
     width: 100%;
     height: 100%;
-    padding: 28px 18px 28px 18px;
+    padding: 112px 43px 67px 43px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -35,7 +35,7 @@
     bottom: 0;
     width: 100%;
     height: 100%;
-    padding: 28px 18px 28px 18px;
+    padding: 112px 43px 67px 43px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -43,6 +43,65 @@
     transition-property: opacity, scale;
     transition-duration: 180ms;
     transition-timing-function: ease-out;
+}
+
+.sv-level-selector {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 653px;
+    height: 130px;
+    min-height: 130px;
+    flex-shrink: 0;
+    padding: 0 18px;
+    margin-bottom: 24px;
+    background-color: #EEF6C5;
+    border-width: 10px;
+    border-color: #69B34C;
+    border-radius: 38px;
+}
+
+.sv-level-btn {
+    width: 88px;
+    height: 88px;
+    flex-shrink: 0;
+    background-color: #69B34C;
+    color: #FFFFFF;
+    font-size: 52px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    border-width: 0;
+    border-radius: 24px;
+    padding: 0;
+    margin: 0;
+}
+
+.sv-level-btn:hover {
+    scale: 1.05 1.05;
+}
+
+.sv-level-btn:active {
+    scale: 0.93 0.93;
+}
+
+.sv-level-label {
+    flex-grow: 1;
+    font-size: 56px;
+    -unity-font-style: bold;
+    color: #231F20;
+    -unity-text-align: middle-center;
+}
+
+.sv-btn-icon--red {
+    background-image: none;
+    background-color: #D94848;
+    border-width: 8px;
+    border-color: #A62B2B;
+    border-radius: 28px;
+}
+
+.sv-btn-icon--red .sv-btn-icon__glyph {
+    -unity-background-image-tint-color: #FFFFFF;
 }
 
 .is-hidden {
@@ -72,16 +131,16 @@
 
 /* Reusable Buttons */
 .sv-btn-icon {
-    width: 50px;
-    height: 50px;
+    width: 120px;
+    height: 120px;
     flex-shrink: 0;
-    padding: 8px;
+    padding: 19px;
     margin: 0;
     border-width: 0;
     background-color: transparent;
     background-image: url("project://database/Assets/SudokuVerde_Assets/PNG/button_icon_base.png");
     background-size: contain;
-    background-repeat: no-repeat;
+    flex-shrink: 0;    background-repeat: no-repeat;
     background-position: center;
     align-items: center;
     justify-content: center;
@@ -102,7 +161,7 @@
     height: 100%;
     flex-shrink: 0;
     background-size: contain;
-    background-repeat: no-repeat;
+    flex-shrink: 0;    background-repeat: no-repeat;
     background-position: center;
 }
 
@@ -123,16 +182,18 @@
 }
 
 .sv-btn-wide {
-    width: 272px;
-    height: 54px;
+    width: 653px;
+    height: 130px;
+    min-height: 130px;
     flex-shrink: 0;
-    padding: 0 16px;
-    margin: 7px 0;
-    border-width: 4px;
+    flex-shrink: 0;
+    padding: 0 38px;
+    margin: 17px 0;
+    border-width: 10px;
     border-color: #69B34C;
-    border-radius: 16px;
+    border-radius: 38px;
     background-color: #EEF6C5;
-    font-size: 22px;
+    font-size: 53px;
     -unity-font-style: bold;
     color: #231F20;
     -unity-text-align: middle-center;
@@ -151,9 +212,9 @@
 /* Header */
 .sv-header {
     width: 100%;
-    max-width: 364px;
-    height: 56px;
-    margin-bottom: 10px;
+    max-width: 874px;
+    height: 134px;
+    margin-bottom: 24px;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -161,13 +222,13 @@
 }
 
 .sv-header__banner {
-    height: 50px;
+    height: 120px;
     flex-grow: 1;
-    margin: 0 10px;
+    margin: 0 24px;
     background-color: #EEF6C5;
-    border-width: 4px;
+    border-width: 10px;
     border-color: #69B34C;
-    border-radius: 16px;
+    border-radius: 38px;
     align-items: center;
     justify-content: center;
 }
@@ -177,40 +238,40 @@
 }
 
 .sv-header__title {
-    font-size: 23px;
+    font-size: 55px;
     -unity-font-style: bold;
     color: #231F20;
     -unity-text-align: middle-center;
 }
 
 .sv-header__spacer {
-    width: 50px;
-    height: 50px;
+    width: 120px;
+    height: 120px;
     flex-shrink: 0;
 }
 
 /* Main Menu */
 .menu-top-bar {
     width: 100%;
-    max-width: 364px;
+    max-width: 874px;
     flex-direction: row;
-    justify-content: flex-start;
-    margin-bottom: 4px;
+    justify-content: space-between;
+    margin-bottom: 10px;
 }
 
 .menu-illustration {
-    width: 280px;
-    height: 220px;
+    width: 672px;
+    height: 528px;
     flex-shrink: 0;
     background-image: url("project://database/Assets/SudokuVerde_Assets/PNG/illustration_garden.png");
     background-size: contain;
-    background-repeat: no-repeat;
+    flex-shrink: 0;    background-repeat: no-repeat;
     background-position: center;
 }
 
 .menu-title {
-    margin-top: 4px;
-    font-size: 46px;
+    margin-top: 10px;
+    font-size: 110px;
     -unity-font-style: bold;
     color: #367B28;
     -unity-text-align: middle-center;
@@ -218,34 +279,34 @@
 }
 
 .menu-streak-caption {
-    margin-top: 16px;
-    font-size: 16px;
+    margin-top: 38px;
+    font-size: 38px;
     -unity-font-style: bold;
     color: #231F20;
     -unity-text-align: middle-center;
 }
 
 .menu-streak-pill {
-    width: 204px;
-    height: 44px;
-    margin-top: 4px;
+    width: 490px;
+    height: 106px;
+    margin-top: 10px;
     background-color: #EEF6C5;
-    border-width: 4px;
+    border-width: 10px;
     border-color: #69B34C;
-    border-radius: 14px;
+    border-radius: 34px;
     align-items: center;
     justify-content: center;
 }
 
 .menu-streak-value {
-    font-size: 22px;
+    font-size: 53px;
     -unity-font-style: bold;
     color: #231F20;
     -unity-text-align: middle-center;
 }
 
 .menu-actions {
-    margin-top: 32px;
+    margin-top: 77px;
     align-items: center;
     justify-content: center;
 }
@@ -254,7 +315,7 @@
 .gameplay-content {
     flex-grow: 1;
     width: 100%;
-    max-width: 364px;
+    max-width: 874px;
     align-items: center;
     justify-content: center;
 }
@@ -263,40 +324,40 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding: 5px 16px;
-    margin-bottom: 10px;
+    padding: 12px 38px;
+    margin-bottom: 24px;
     background-color: #EEF6C5;
-    border-width: 3px;
+    border-width: 7px;
     border-color: #69B34C;
-    border-radius: 16px;
+    border-radius: 38px;
 }
 
 .plant-progress-icon {
-    width: 24px;
-    height: 28px;
-    margin-right: 8px;
+    width: 58px;
+    height: 67px;
+    margin-right: 19px;
     flex-shrink: 0;
     background-image: url("project://database/Assets/SudokuVerde_Assets/PNG/icon_plant.png");
     background-size: contain;
-    background-repeat: no-repeat;
+    flex-shrink: 0;    background-repeat: no-repeat;
     background-position: center;
 }
 
 .plant-progress-text {
-    font-size: 20px;
+    font-size: 48px;
     -unity-font-style: bold;
     color: #231F20;
     -unity-text-align: middle-center;
 }
 
 .board-frame {
-    width: 356px;
-    height: 356px;
-    padding: 12px;
+    width: 854px;
+    height: 854px;
+    padding: 29px;
     background-color: #EEF6C5;
-    border-width: 5px;
+    border-width: 12px;
     border-color: #69B34C;
-    border-radius: 22px;
+    border-radius: 53px;
     align-items: center;
     justify-content: center;
 }
@@ -311,12 +372,12 @@
 }
 
 .board-cell {
-    width: 23.4%;
-    height: 23.4%;
-    margin: 0;
-    padding: 8px;
+    width: 22.5%;
+    height: 22.5%;
+    margin: 1.25%;
+    padding: 19px;
     border-width: 0;
-    border-radius: 14px;
+    border-radius: 34px;
     background-color: transparent;
     align-items: center;
     justify-content: center;
@@ -349,17 +410,17 @@
 }
 
 .cell--player-plant {
-    border-width: 3px;
+    border-width: 7px;
     border-color: #FFFFFF;
 }
 
 .cell--hinted {
-    border-width: 4px;
+    border-width: 10px;
     border-color: #FFD600;
 }
 
 .cell--conflict {
-    border-width: 4px;
+    border-width: 10px;
     border-color: #D9362B;
 }
 
@@ -369,7 +430,7 @@
     flex-shrink: 0;
     background-image: url("project://database/Assets/SudokuVerde_Assets/PNG/icon_plant.png");
     background-size: contain;
-    background-repeat: no-repeat;
+    flex-shrink: 0;    background-repeat: no-repeat;
     background-position: center;
 }
 
@@ -379,7 +440,7 @@
     flex-shrink: 0;
     background-image: url("project://database/Assets/SudokuVerde_Assets/PNG/icon_cross.png");
     background-size: contain;
-    background-repeat: no-repeat;
+    flex-shrink: 0;    background-repeat: no-repeat;
     background-position: center;
 }
 
@@ -387,28 +448,28 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
-    margin-top: 22px;
+    margin-top: 53px;
 }
 
 .action-slot {
     align-items: center;
-    margin: 0 10px;
+    margin: 0 24px;
 }
 
 .action-btn-wrap {
     position: relative;
-    width: 82px;
-    height: 78px;
+    width: 197px;
+    height: 187px;
 }
 
 .sv-btn-action {
-    width: 82px;
-    height: 78px;
-    padding: 12px;
+    width: 197px;
+    height: 187px;
+    padding: 29px;
     margin: 0;
-    border-width: 4px;
+    border-width: 10px;
     border-color: #69B34C;
-    border-radius: 18px;
+    border-radius: 43px;
     background-color: #EEF6C5;
     align-items: center;
     justify-content: center;
@@ -425,7 +486,7 @@
 }
 
 .tool-btn--active {
-    border-width: 4px;
+    border-width: 10px;
     border-color: #2E7D32;
     background-color: #D7F09F;
 }
@@ -436,7 +497,7 @@
     flex-shrink: 0;
     background-image: url("project://database/Assets/SudokuVerde_Assets/PNG/icon_plant.png");
     background-size: contain;
-    background-repeat: no-repeat;
+    flex-shrink: 0;    background-repeat: no-repeat;
     background-position: center;
 }
 
@@ -446,7 +507,7 @@
     flex-shrink: 0;
     background-image: url("project://database/Assets/SudokuVerde_Assets/PNG/icon_cross.png");
     background-size: contain;
-    background-repeat: no-repeat;
+    flex-shrink: 0;    background-repeat: no-repeat;
     background-position: center;
     -unity-background-image-tint-color: #367B28;
 }
@@ -457,7 +518,7 @@
     flex-shrink: 0;
     background-image: url("project://database/Assets/SudokuVerde_Assets/PNG/icon_hint.png");
     background-size: contain;
-    background-repeat: no-repeat;
+    flex-shrink: 0;    background-repeat: no-repeat;
     background-position: center;
 }
 
@@ -473,33 +534,33 @@
 
 .action-badge {
     position: absolute;
-    right: -10px;
-    top: -10px;
-    width: 34px;
-    height: 34px;
+    right: -24px;
+    top: -24px;
+    width: 82px;
+    height: 82px;
     background-image: url("project://database/Assets/SudokuVerde_Assets/PNG/badge_base.png");
     background-size: contain;
-    background-repeat: no-repeat;
+    flex-shrink: 0;    background-repeat: no-repeat;
     background-position: center;
     align-items: center;
     justify-content: center;
 }
 
 .action-badge__text {
-    font-size: 18px;
+    font-size: 43px;
     -unity-font-style: bold;
     color: #FFFFFF;
     -unity-text-align: middle-center;
 }
 
 .action-caption {
-    margin-top: 6px;
-    padding: 3px 8px;
-    border-radius: 10px;
+    margin-top: 14px;
+    padding: 7px 19px;
+    border-radius: 24px;
     background-color: rgba(238, 246, 197, 0.92);
-    border-width: 2px;
+    border-width: 5px;
     border-color: #69B34C;
-    font-size: 12px;
+    font-size: 29px;
     -unity-font-style: bold;
     color: #231F20;
     -unity-text-align: middle-center;
@@ -509,33 +570,35 @@
 .settings-content {
     flex-grow: 1;
     width: 100%;
-    max-width: 364px;
+    max-width: 874px;
     align-items: center;
     justify-content: center;
 }
 
 .settings-group {
     align-items: center;
-    margin: 14px 0;
+    margin: 34px 0;
 }
 
 .settings-label {
-    font-size: 20px;
+    font-size: 48px;
     -unity-font-style: bold;
     color: #231F20;
-    margin-bottom: 6px;
+    margin-bottom: 14px;
     -unity-text-align: middle-center;
 }
 
 .settings-toggle {
-    width: 272px;
-    height: 54px;
+    width: 653px;
+    height: 130px;
+    min-height: 130px;
+    flex-shrink: 0;
     margin: 0;
     padding: 0;
     background-color: #EEF6C5;
-    border-width: 4px;
+    border-width: 10px;
     border-color: #69B34C;
-    border-radius: 16px;
+    border-radius: 38px;
     align-items: center;
     justify-content: center;
     transition-property: scale;
@@ -560,7 +623,7 @@
 }
 
 .settings-toggle__text {
-    font-size: 22px;
+    font-size: 53px;
     -unity-font-style: bold;
     color: #231F20;
     -unity-text-align: middle-center;
@@ -575,20 +638,20 @@
 }
 
 .pause-card {
-    width: 336px;
-    padding: 24px 20px;
+    width: 806px;
+    padding: 58px 48px;
     background-color: #EEF6C5;
-    border-width: 4px;
+    border-width: 10px;
     border-color: #69B34C;
-    border-radius: 24px;
+    border-radius: 58px;
     align-items: center;
 }
 
 .pause-title {
-    font-size: 26px;
+    font-size: 62px;
     -unity-font-style: bold;
     color: #231F20;
-    margin-bottom: 14px;
+    margin-bottom: 34px;
     -unity-text-align: middle-center;
 }
 
@@ -596,7 +659,7 @@
 .tutorial-content {
     flex-grow: 1;
     width: 100%;
-    max-width: 364px;
+    max-width: 874px;
     align-items: center;
     justify-content: space-evenly;
 }
@@ -607,12 +670,12 @@
 }
 
 .tutorial-diagram {
-    width: 108px;
-    height: 100px;
-    margin-bottom: 8px;
+    width: 259px;
+    height: 240px;
+    margin-bottom: 19px;
     flex-shrink: 0;
     background-size: contain;
-    background-repeat: no-repeat;
+    flex-shrink: 0;    background-repeat: no-repeat;
     background-position: center;
 }
 
@@ -629,43 +692,43 @@
 }
 
 .tutorial-panel-short {
-    width: 274px;
-    min-height: 50px;
-    padding: 8px 16px;
+    width: 658px;
+    min-height: 120px;
+    padding: 19px 38px;
     background-color: #EEF6C5;
-    border-width: 4px;
+    border-width: 10px;
     border-color: #69B34C;
-    border-radius: 16px;
+    border-radius: 38px;
     align-items: center;
     justify-content: center;
 }
 
 .tutorial-panel-medium {
-    width: 278px;
-    min-height: 76px;
-    padding: 8px 16px;
+    width: 667px;
+    min-height: 182px;
+    padding: 19px 38px;
     background-color: #EEF6C5;
-    border-width: 4px;
+    border-width: 10px;
     border-color: #69B34C;
-    border-radius: 16px;
+    border-radius: 38px;
     align-items: center;
     justify-content: center;
 }
 
 .tutorial-panel-large {
-    width: 310px;
-    min-height: 82px;
-    padding: 8px 18px;
+    width: 744px;
+    min-height: 197px;
+    padding: 19px 43px;
     background-color: #EEF6C5;
-    border-width: 4px;
+    border-width: 10px;
     border-color: #69B34C;
-    border-radius: 16px;
+    border-radius: 38px;
     align-items: center;
     justify-content: center;
 }
 
 .tutorial-text {
-    font-size: 19px;
+    font-size: 46px;
     -unity-font-style: bold;
     color: #231F20;
     -unity-text-align: middle-center;
@@ -675,70 +738,70 @@
 /* Victory Overlay */
 .victory-top-bar {
     width: 100%;
-    max-width: 364px;
+    max-width: 874px;
     flex-direction: row;
     justify-content: flex-start;
-    margin-bottom: 8px;
+    margin-bottom: 19px;
 }
 
 .victory-content {
     flex-grow: 1;
     width: 100%;
-    max-width: 364px;
+    max-width: 874px;
     align-items: center;
     justify-content: center;
 }
 
 .victory-title-panel {
-    width: 314px;
-    height: 84px;
+    width: 754px;
+    height: 202px;
     background-color: #EEF6C5;
-    border-width: 4px;
+    border-width: 10px;
     border-color: #69B34C;
-    border-radius: 22px;
+    border-radius: 53px;
     align-items: center;
     justify-content: center;
-    margin-bottom: 18px;
+    margin-bottom: 43px;
 }
 
 .victory-title-text {
-    font-size: 26px;
+    font-size: 62px;
     -unity-font-style: bold;
     color: #231F20;
     -unity-text-align: middle-center;
 }
 
 .victory-reward-panel {
-    width: 314px;
-    height: 230px;
+    width: 754px;
+    height: 552px;
     background-color: #EEF6C5;
-    border-width: 4px;
+    border-width: 10px;
     border-color: #69B34C;
-    border-radius: 24px;
+    border-radius: 58px;
     align-items: center;
     justify-content: center;
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 48px;
 }
 
 .victory-sparkles {
     position: absolute;
-    width: 200px;
-    height: 190px;
+    width: 480px;
+    height: 456px;
     background-image: url("project://database/Assets/SudokuVerde_Assets/PNG/sparkles_victory.png");
     background-size: contain;
-    background-repeat: no-repeat;
+    flex-shrink: 0;    background-repeat: no-repeat;
     background-position: center;
     transition-property: scale;
     transition-duration: 360ms;
 }
 
 .victory-plant {
-    width: 108px;
-    height: 140px;
+    width: 259px;
+    height: 336px;
     background-image: url("project://database/Assets/SudokuVerde_Assets/PNG/icon_plant_victory.png");
     background-size: contain;
-    background-repeat: no-repeat;
+    flex-shrink: 0;    background-repeat: no-repeat;
     background-position: center;
     transition-property: scale;
     transition-duration: 300ms;

@@ -161,7 +161,7 @@ namespace SudokuVerde.UI.Shared.Controllers
             if (enforceReferenceResolution && _uiDocument.panelSettings != null)
             {
                 _uiDocument.panelSettings.scaleMode = PanelScaleMode.ScaleWithScreenSize;
-                _uiDocument.panelSettings.referenceResolution = new Vector2Int(400, 800);
+                _uiDocument.panelSettings.referenceResolution = new Vector2Int(1080, 1920);
                 _uiDocument.panelSettings.screenMatchMode = PanelScreenMatchMode.MatchWidthOrHeight;
                 _uiDocument.panelSettings.match = 0.5f;
             }
@@ -290,6 +290,12 @@ namespace SudokuVerde.UI.Shared.Controllers
             RegisterClick(root, "btn-menu-settings", () => _navigationVm.OpenSettings(ScreenId.MainMenu));
             RegisterClick(root, "btn-play", StartStandardLevel);
             RegisterClick(root, "btn-daily-challenge", StartDailyChallenge);
+            VisualElement quitConfirmOverlay = root.Q<VisualElement>("quit-confirm-overlay");
+            RegisterClick(root, "btn-quit", () => quitConfirmOverlay?.RemoveFromClassList("is-hidden"));
+            RegisterClick(root, "btn-quit-confirm", QuitGame);
+            RegisterClick(root, "btn-quit-cancel", () => quitConfirmOverlay?.AddToClassList("is-hidden"));
+            RegisterClick(root, "btn-prev-level", () => _progressVm.SelectPreviousLevel());
+            RegisterClick(root, "btn-next-level", () => _progressVm.SelectNextLevel());
 
             // Gameplay (One-way bindings to GameViewModel)
             if (_gameplayScreen != null)
@@ -536,6 +542,15 @@ namespace SudokuVerde.UI.Shared.Controllers
             btn.Add(plant);
             btn.Add(cross);
             return btn;
+        }
+
+        private void QuitGame()
+        {
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#else
+            Application.Quit();
+#endif
         }
 
         private void StartStandardLevel()

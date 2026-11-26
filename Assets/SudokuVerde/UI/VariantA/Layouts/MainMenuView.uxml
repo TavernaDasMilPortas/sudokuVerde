@@ -4,6 +4,9 @@
             <ui:Button name="btn-menu-settings" class="sv-btn-icon" tooltip="Configurações">
                 <ui:VisualElement class="sv-btn-icon__glyph glyph-settings" picking-mode="Ignore" />
             </ui:Button>
+            <ui:Button name="btn-quit" class="sv-btn-icon sv-btn-icon--red" tooltip="Sair">
+                <ui:VisualElement class="sv-btn-icon__glyph glyph-close" picking-mode="Ignore" />
+            </ui:Button>
         </ui:VisualElement>
 
         <ui:VisualElement class="menu-illustration" picking-mode="Ignore" />
@@ -16,8 +19,23 @@
         </ui:VisualElement>
 
         <ui:VisualElement class="menu-actions">
+            <ui:VisualElement class="sv-level-selector">
+                <ui:Button name="btn-prev-level" text="&lt;" class="sv-level-btn" />
+                <ui:Label name="menu-level-label" text="Nivel 1" class="sv-level-label" />
+                <ui:Button name="btn-next-level" text="&gt;" class="sv-level-btn" />
+            </ui:VisualElement>
             <ui:Button name="btn-play" text="JOGAR" class="sv-btn-wide" />
             <ui:Button name="btn-daily-challenge" text="DESAFIO DIARIO" class="sv-btn-wide" />
+        </ui:VisualElement>
+
+        <ui:VisualElement name="quit-confirm-overlay" class="sv-overlay bg-overlay-green is-hidden">
+            <ui:VisualElement class="pause-backdrop">
+                <ui:VisualElement class="pause-card">
+                    <ui:Label text="Deseja mesmo sair?" class="pause-title" />
+                    <ui:Button name="btn-quit-confirm" text="SIM" class="sv-btn-wide" />
+                    <ui:Button name="btn-quit-cancel" text="NAO" class="sv-btn-wide" />
+                </ui:VisualElement>
+            </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

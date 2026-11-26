@@ -9,6 +9,7 @@ namespace SudokuVerde.UI.Shared.ViewModels
         private int _dailyStreak;
         private string _dailyStreakText = "0";
         private int _currentLevel;
+        private int _highestUnlockedLevel = 1;
         private string _currentLevelLabelText = "Nivel 1";
         private int _completedLevelsCount;
 
@@ -40,6 +41,10 @@ namespace SudokuVerde.UI.Shared.ViewModels
             {
                 if (SetProperty(ref _currentLevel, value))
                 {
+                    if (value > _highestUnlockedLevel)
+                    {
+                        _highestUnlockedLevel = value;
+                    }
                     CurrentLevelLabelText = $"Nivel {value}";
                 }
             }
@@ -82,6 +87,21 @@ namespace SudokuVerde.UI.Shared.ViewModels
             }
 
             SudokuPersistence.SaveProgress(CurrentLevel, DailyStreak, CompletedLevelsCount);
+        }
+        public void SelectPreviousLevel()
+        {
+            if (CurrentLevel > 1)
+            {
+                CurrentLevel--;
+            }
+        }
+
+        public void SelectNextLevel()
+        {
+            if (CurrentLevel < _highestUnlockedLevel)
+            {
+                CurrentLevel++;
+            }
         }
     }
 }
