@@ -416,7 +416,8 @@ namespace SudokuVerde.UI.Shared.Controllers
             VisualTreeAsset cellAsset = isVariantB && variantBCellTemplate != null
                 ? variantBCellTemplate
                 : boardCellTemplate;
-            float cellPct = isVariantB ? 23.8f : 23.2f;
+            float cellPct = 22.5f;
+            float marginPct = 1.25f;
 
             for (int i = 0; i < _gameVm.Cells.Length; i++)
             {
@@ -437,8 +438,16 @@ namespace SudokuVerde.UI.Shared.Controllers
                 {
                     cellRoot.style.width = new Length(cellPct, LengthUnit.Percent);
                     cellRoot.style.height = new Length(cellPct, LengthUnit.Percent);
+                    cellRoot.style.marginLeft = new Length(marginPct, LengthUnit.Percent);
+                    cellRoot.style.marginRight = new Length(marginPct, LengthUnit.Percent);
+                    cellRoot.style.marginTop = new Length(marginPct, LengthUnit.Percent);
+                    cellRoot.style.marginBottom = new Length(marginPct, LengthUnit.Percent);
                     cellButton.style.width = new Length(100f, LengthUnit.Percent);
                     cellButton.style.height = new Length(100f, LengthUnit.Percent);
+                    cellButton.style.marginLeft = 0;
+                    cellButton.style.marginRight = 0;
+                    cellButton.style.marginTop = 0;
+                    cellButton.style.marginBottom = 0;
                 }
 
                 cellButton.dataSource = cellVm;
